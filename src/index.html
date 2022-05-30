@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,47 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
-    
+    <!---------------- first three titles ----------------------->
+    <div class="header">
+        <h1 class="header__main-title">Rock Paper Scissors</h1>
+        <h3 class="header__secondary-title">The Ultimate Game of All Games</h2>
+            <p class="header__text-rules">Rules: Rock beats Scissors, Scissors beat Paper, and Paper beats Rock</p>
+    </div>
+
+    <!--------------- middle  part with score -------------- -->
+    <div class="scoreboard">
+        <h2 class="scoreboard__title">Scoreboard</h2>
+        <div class="scoreboard__score">
+            <div class="scoreboard__player">
+                <p class="scoreboard__count">You</p>
+                <p class="scoreboard__name">0</p>
+            </div>
+            <div class="scoreboard__bot">
+                <p class="scoreboard__count">Bot</p>
+                <p class="scoreboard__name">0</p>
+            </div>
+        </div>
+    </div>
+
+    <!---------------- part with active buttons ------------------>
+    <div class="interface">
+        <h2 class="interface__title">Play The Game</h2>
+        <div class="interface__game-buttons ">
+            <button class="interface__btn interface__btn_rock">ROCK</button>
+            <button class="interface__btn interface__btn_paper">PAPER</button>
+            <button class="interface__btn interface__btn_scissor">SCISSORS</button>
+        </div>
+    </div>
+
+    <!-----------------------------Footer with informations--------------------- -->
+    <div class="footer">
+        <p class="footer__results footer__results_player">You played: rock</p>
+        <p class="footer__results footer__results_bot">Bot played: scissors</p>
+        <p class="footer__results footer__results_winner">Result of this Round: Won</p>
+    </div>
+
 </body>
+
 </html>
