@@ -18,10 +18,52 @@ let bot_score = 0;
 // Overall result, to be assigned
 let result;
 
+//options in global scope to have acces for both functions
+const options = ["rock", "paper", "scissors"];
+
 // func returns random result aka bot plays
 const getComputerPlay = () => {
-  const options = ["rock", "paper", "scissors"];
+
   return options[Math.floor(Math.random() * options.length)];
 };
 
-console.log(getComputerPlay());
+ console.log(getComputerPlay()); //<<< can be removed here --- same log in play() function
+
+// hardcoded input value for function, needs to be handled by buttons
+const humanPlay = "paper"
+
+//function which will take the parameter humanPlay, calls the getComputerPlay function, write conditions based on game rules and  update the scores, choices and the result on the page.increase the scores
+const play = (humanPlay) => {
+
+  const computerPlay = getComputerPlay()
+  // log for value check , can be removed
+  console.log(humanPlay);
+  console.log(computerPlay);
+  results_bot.textContent += computerPlay;
+  results_player.textContent += humanPlay;
+  if (humanPlay === computerPlay) {
+
+    results_winner.textContent += "TIE...play again"
+  } else if (humanPlay === "rock" && computerPlay === ("scissors")) {
+    results_winner.textContent += "You Won"
+    my_score++
+  } else if (humanPlay === "scissors" && computerPlay === "paper") {
+    results_winner.textContent += "You Won"
+    my_score++
+  }
+  else if (humanPlay === "paper" && computerPlay === "rock") {
+    results_winner.textContent += "You Won"
+    my_score++
+  }
+
+  else {
+    results_winner.textContent += "You Lost";
+    bot_score++
+  }
+
+  scoreboard_bot.textContent = bot_score;
+  scoreboard_you.textContent = my_score;
+
+}
+
+play(humanPlay)
