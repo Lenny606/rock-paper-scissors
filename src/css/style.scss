@@ -77,8 +77,13 @@ body {
   align-items: center;
   margin: 1em;
 
-  .img_hidden {
-    // display: none;
+  .footer__results {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  img {
     width: 3em;
   }
 }
